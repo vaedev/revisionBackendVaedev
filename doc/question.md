@@ -1,12 +1,11 @@
 # question importante
 
 ## court terme
-1. Comment mieux comprendre le dataMapper
+1. Faire un MCD, mld et companie.
+2. Comment mieux comprendre le dataMapper
     - identifier les éléments que je ne comprends pas.
-2. Idem pour le core model
-3. J'ai une très mauvaise compréhension des models.
-4. Faire un MCD
-5. MLD
+3. Idem pour le core model
+4. J'ai une très mauvaise compréhension des models.
 
 
 ## moyen terme
