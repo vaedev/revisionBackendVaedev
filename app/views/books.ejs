@@ -3,4 +3,12 @@
 
 <h1>books</h1>
 
+<% for(const book of books) { %>
+    <div>
+        <h3><%= book.titre %></h3>
+        <p><%=book.auteur%></p>
+        <p><%=book.nb_page%></p>
+    </div>
+    <% } %>
+
 <%- include('partials/footer.ejs') %>

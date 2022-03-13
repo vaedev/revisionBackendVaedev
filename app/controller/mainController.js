@@ -20,8 +20,15 @@ const mainController = {
       nom: titleName,
     });
   },
-  getBooks: (req, res) => {
-    res.render("books");
+  getBooks: async (req, res) => {
+    try{
+      const books = await dataMapper.getAllBooks();
+      res.render('books', {books});
+      
+    } catch (error) {
+      console.log(error);
+      res.status(500).send(`quelque chose ne marche pas`)
+    }
   },
 };
 
