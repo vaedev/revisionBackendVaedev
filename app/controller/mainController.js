@@ -1,4 +1,4 @@
-const dataMapper = require('../models/dataMapper')
+const dataMapper = require("../models/dataMapper");
 
 const mainController = {
   getHome: (req, res) => {
@@ -14,12 +14,15 @@ const mainController = {
     };
     res.render("data", { model: test });
   },
-  getOneLivre:(req,res) =>{
-    let titleName=(req.params.nom); 
+  getOneLivre: (req, res) => {
+    let titleName = req.params.nom;
     res.render("livres/oneLivre", {
-      nom:titleName
+      nom: titleName,
     });
-  }
+  },
+  getBooks: (req, res) => {
+    res.render("books");
+  },
 };
 
 module.exports = mainController;
