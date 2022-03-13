@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<%- include('partials/header.ejs') %>
+
+<div class="accueil">
+  <h1 class="title__pattern">Livres</h1>
+
+  <table class="tableau">
+    <thead class="tableau__thead">
+      <tr class="tableau__thead__tr">
+        <th class="tableau__thead__tr__th">Titre</th>
+        <th class="tableau__thead__tr__th">Auteur</th>
+        <th class="tableau__thead__tr__th">Nombre de page</th>
+        <th class="tableau__thead__tr__th" colspan="2">actions</th>
+      </tr>
+    </thead>
+    <tbody>
+       <!-- ici commence un livre -->
+      <tr class="tableau__thead__tr">
+        <td>mon premier livre</td>
+        <td>moi</td>
+        <td>250</td>
+        <td><a class="btn btn_update" href="">Modifier</a></td>
+        <td><a class="btn btn_delete" href="">Supprimer</a></td>
+      </tr>
+    </tbody>
+    
+  </table>
+
+  <a class="btn_add" href="">Ajouter un livre</a>
+
+</div>
+
+<%- include('partials/footer.ejs') %>

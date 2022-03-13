@@ -4,8 +4,8 @@ const mainController = {
   getHome: (req, res) => {
     res.render("accueil");
   },
-  getAbout: (req, res) => {
-    res.render("about");
+  getLivres: (req, res) => {
+    res.render("livres");
   },
   data: (req, res) => {
     const test = {
