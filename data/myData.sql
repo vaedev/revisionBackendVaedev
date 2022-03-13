@@ -1,14 +1,15 @@
 CREATE TABLE IF NOT EXISTS Livres (
   Livre_ID SERIAL PRIMARY KEY,
-  Titre VARCHAR(100) NOT NULL,
-  Auteur VARCHAR(100) NOT NULL,
-  Commentaires TEXT
+  Titre TEXT NOT NULL,
+  Auteur TEXT NOT NULL,
+  nb_page INTEGER NOT NULL
 );
 
-INSERT INTO Livres (Livre_ID, Titre, Auteur, Commentaires) VALUES
-  (1, 'Mrs. Bridge', 'Evan S. Connell', 'Premier de la série'),
-  (2, 'Mr. Bridge', 'Evan S. Connell', 'Second de la série'),
-  (3, 'L''ingénue libertine', 'Colette', 'Minne + Les égarements de Minne')
+INSERT INTO Livres (livre_ID, titre, auteur, nb_page) VALUES
+  (1, 'L''art de la guerre', 'Sun Zu', 250),
+  (2, 'Hagakure', 'Yamamoto Tsunetomo', 300),
+  (3, 'L''esprit indomptable', 'Takuan Soho', 150),
+  (3, 'Mystère de la sagesse immobile', 'Takuan Soho', 400)
 
 ON CONFLICT DO NOTHING;
 
