@@ -1,4 +1,4 @@
-const dataMapper = require('../dataMapper')
+const dataMapper = require('../models/dataMapper')
 
 const mainController = {
   getHome: (req, res) => {

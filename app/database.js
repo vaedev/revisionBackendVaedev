@@ -1,8 +1,9 @@
-const { Pool } = require('pg');
+const { Pool } = require("pg");
 
 const pool = new Pool(process.env);
 
 console.log(`✅ DB client connected`);
+
 
 // On peut insérer ici quelques lignes de code pour tester notre BDD, mais le reste devra se faire dans le dataMapper.
 
@@ -12,7 +13,7 @@ console.log(`✅ DB client connected`);
 //     Auteur VARCHAR(100) NOT NULL,
 //     Commentaires TEXT
 //   );`;
-  
+
 //   pool.query(sql_create, [], (err, result) => {
 //     if (err) {
 //       return console.error(err.message);
@@ -21,4 +22,3 @@ console.log(`✅ DB client connected`);
 //   });
 
 module.exports = pool;
-

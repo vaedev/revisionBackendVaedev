@@ -160,7 +160,7 @@ body {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  padding: 2em 1em 1em 1em;
 }
 
 .subtitle__right{
@@ -169,4 +169,5 @@ body {
 
 .rhetoric__text{
   padding: 1em 8em;
+  font-size: 1.2em;
 }
