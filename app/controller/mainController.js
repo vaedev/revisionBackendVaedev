@@ -5,7 +5,7 @@ const mainController = {
     res.render("accueil");
   },
   getLivres: (req, res) => {
-    res.render("livres");
+    res.render("livres/livres");
   },
   data: (req, res) => {
     const test = {
@@ -14,6 +14,12 @@ const mainController = {
     };
     res.render("data", { model: test });
   },
+  getOneLivre:(req,res) =>{
+    let titleName=(req.params.nom); 
+    res.render("livres/oneLivre", {
+      nom:titleName
+    });
+  }
 };
 
 module.exports = mainController;

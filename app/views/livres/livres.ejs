@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%- include('partials/header.ejs') %>
+<%- include('../partials/header.ejs') %>
 
 <div class="accueil">
   <h1 class="title__pattern">Livres</h1>
@@ -16,7 +16,7 @@
     <tbody>
        <!-- ici commence un livre -->
       <tr class="tableau__thead__tr">
-        <td>mon premier livre</td>
+        <td><a class="lien__livre" href="/livres/mon premier livre"> mon premier livre</a></td>
         <td>moi</td>
         <td>250</td>
         <td><a class="btn btn_update" href="">Modifier</a></td>
@@ -30,4 +30,4 @@
 
 </div>
 
-<%- include('partials/footer.ejs') %>
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,172 @@
+/* On remarque ici qu'on peut sous-traiter un autre fichier css pour les rendus dynamique en jouant avec les dossiers, très sympa j'approfondirais ça quand je m'entraînerai sur le front end ça me fait penser à react. */
+
+body {
+  background: black;
+  color: antiquewhite;
+}
+
+/* nagivation */
+.navigation__partials {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  position: fixed;
+  /* background: black; */
+  width: 100%;
+  top: 0;
+}
+
+.navigation__container {
+  display: flex;
+}
+
+.navigation__item {
+  margin: 0 1em;
+  list-style: none;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: aqua;
+  font-size: 1.5em;
+}
+
+.navigation__link:hover {
+  color: rgb(64, 165, 165);
+  text-decoration: underline;
+}
+
+/* footer */
+
+.footer__partial {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.418);
+  bottom: 1em;
+}
+
+/* accueil*/
+
+.accueil {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* listes livres */
+
+.tableau {
+  text-align: center;
+  border: 1px solid ghostwhite;
+  padding: 0.5em;
+}
+
+.tableau__thead__tr th {
+  color: green;
+  padding: 1em 0;
+}
+
+.tableau__thead__tr td {
+  color: bisque;
+  padding: 1em 0.5em;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  text-decoration: none;
+  color: rgba(248, 248, 255, 0.781);
+}
+
+.btn_update {
+  background-color: rgba(255, 166, 0, 0.76);
+}
+
+.btn_update:hover {
+  background-color: rgb(255, 166, 0);
+  color: rgb(248, 248, 255);
+}
+
+.btn_delete {
+  background-color: rgba(255, 0, 0, 0.747);
+}
+
+.btn_delete:hover {
+  background-color: rgb(255, 0, 0);
+  color: rgb(248, 248, 255);
+}
+
+.btn_add {
+  padding: 1em 3em;
+  background-color: rgba(0, 128, 0, 0.76);
+  text-decoration: none;
+  color: rgba(248, 248, 255, 0.781);
+  margin: 1.5em 0;
+  border-radius: 5px;
+}
+
+.btn_add:hover {
+  background-color: rgb(0, 128, 0);
+}
+
+.lien__livre {
+  color: rgba(197, 197, 5, 0.746);
+}
+
+.lien__livre:hover {
+  color: rgb(197, 197, 5);
+}
+
+/* gestion livre unique */
+
+.accueil__livre__unique {
+  display: flex;
+  margin-top: 6em;
+}
+
+/* left content */
+
+.left__content {
+  width: 50%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid ghostwhite;
+  padding: 2em;
+}
+
+.livre__unique__infos {
+  padding-left: 4em;
+  padding-top: 2em;
+}
+
+.img__unique__livre {
+  width: 300px;
+  height: 400px;
+  align-self: center;
+  padding-top: 10em;
+}
+
+/* right content */
+
+.right__content {
+  width: 50%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.subtitle__right{
+  padding-left: 3em;
+}
+
+.rhetoric__text{
+  padding: 1em 8em;
+}
