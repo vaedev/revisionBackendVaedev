@@ -16,6 +16,10 @@ app.use(express.static('public'));
 
 app.use(router)
 
+app.use((req, res, next) => {
+    // Met le code HTTP à 404 et affiche un message au client
+    res.status(404).send("J'ai pas trouvé, tu cherche le film Kaamelott ?");
+});
 
 app.listen(port, () => {
     console.log(`Server started on http://localhost:${port}`);
