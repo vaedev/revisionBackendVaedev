@@ -14,20 +14,25 @@
       </tr>
     </thead>
     <tbody>
-       <!-- ici commence un livre -->
-      <tr class="tableau__thead__tr">
-        <td><a class="lien__livre" href="/livres/mon premier livre"> mon premier livre</a></td>
-        <td>moi</td>
-        <td>250</td>
-        <td><a class="btn btn_update" href="">Modifier</a></td>
-        <td><a class="btn btn_delete" href="">Supprimer</a></td>
-      </tr>
+      <% for(const livre of livres) { %>
+      <div>
+        <tr class="tableau__thead__tr">
+          <td>
+            <a class="lien__livre" href="/livres/<%=livre.titre %>">
+              <%=livre.titre %>
+            </a>
+          </td>
+          <td><%=livre.auteur %></td>
+          <td><%=livre.nb_page %></td>
+          <td><a class="btn btn_update" href="">Modifier</a></td>
+          <td><a class="btn btn_delete" href="">Supprimer</a></td>
+        </tr>
+      </div>
+      <% } %>
     </tbody>
-    
   </table>
 
   <a class="btn_add" href="">Ajouter un livre</a>
-
 </div>
 
 <%- include('../partials/footer.ejs') %>
