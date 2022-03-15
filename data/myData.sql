@@ -74,3 +74,5 @@ INSERT INTO rhetoric (rhetoric_id, Titre_text, exorde, narration,digression,pero
    )
 
 ON CONFLICT DO NOTHING;
+
+
