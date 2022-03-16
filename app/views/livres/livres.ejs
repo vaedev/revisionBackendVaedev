@@ -32,6 +32,14 @@
     </tbody>
   </table>
 
+<h3>test :</h3>
+<% for(const book of livres) { %>
+  <div>
+      <h3><%= book.titre %></h3>
+      <p><%=book.exorde%></p>
+  </div>
+  <% } %>
+
   <a class="btn_add" href="">Ajouter un livre</a>
 </div>
 

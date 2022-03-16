@@ -3,10 +3,13 @@ console.log(`LE DATAMAPPER FTW`);
 
 const dataMapper = {
   getAllBooks: async () => {
-    const sqlQuery = `SELECT * FROM livres;`;
+    const sqlQuery = `SELECT * FROM livres INNER JOIN rhetoric ON livres.rhetoric_id = rhetoric.rhetoric_id;`;
     const data = await pool.query(sqlQuery);
     return data.rows;
   },
+  getOneBooksByID: async () =>{
+    const sqlQuery = `SELECT * FROM livres INNER JOIN rhetoric ON livres.rhetoric_id = rhetoric.rhetoric_id;`;
+  }
 };
 
 module.exports = dataMapper;
