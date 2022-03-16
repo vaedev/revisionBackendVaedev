@@ -6,11 +6,13 @@ const dataMapper = {
     const data = await pool.query(sqlQuery);
     return data.rows;
   },
-  getOneBooksByID: async (livre_id) =>{
-    const sqlQuery = `SELECT * FROM livres WHERE livre_id = $1`;
-    const data = await pool.query(sqlQuery,[livre_id]);
+  getOneBooksByID: async (livre_id) => {
+    const sqlQuery = 
+      `SELECT * FROM livres INNER JOIN rhetoric ON livres.rhetoric_id = rhetoric.rhetoric_id
+      WHERE livre_id = $1`;
+    const data = await pool.query(sqlQuery, [livre_id]);
     return data.rows;
-  }
+  },
 };
 
 module.exports = dataMapper;
@@ -20,10 +22,5 @@ module.exports = dataMapper;
 //     if (err) return console.log(err);
 
 //     console.log(res);
-
-
-
-
-
 
 // const sqlQuery = `SELECT * FROM livres INNER JOIN rhetoric ON livres.rhetoric_id = rhetoric.rhetoric_id;`;
