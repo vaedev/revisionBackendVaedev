@@ -3,6 +3,7 @@ CREATE TABLE Livres (
   Titre TEXT NOT NULL,
   Auteur TEXT NOT NULL,
   nb_page INTEGER NOT NULL
+  id_rhetoric INTEGER NOT NULL
 );
 
 INSERT INTO Livres (livre_ID, titre, auteur, nb_page) VALUES
