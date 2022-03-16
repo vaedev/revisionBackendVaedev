@@ -1,3 +1,4 @@
+const { getOneBooksByID } = require("../models/dataMapper");
 const dataMapper = require("../models/dataMapper");
 
 const mainController = {
@@ -7,16 +8,22 @@ const mainController = {
   getLivres: async (req, res) => {
     try {
       const livres = await dataMapper.getAllBooks();
+      console.log(livres);
       res.render("livres/livres", { livres });
     } catch (err) {
       console.log(err).status(500).render("something wrong");
     }
   },
-  getOneLivre: (req, res) => {
-    let titleName = req.params.nom;
-    res.render("livres/oneLivre", {
-      nom: titleName,
-    });
+  getOneLivre: async (req, res) => {
+    const livreID = Number(req.params.id);
+    try {
+      const livreTAB = await dataMapper.getOneBooksByID(livreID);
+      const livre = livreTAB[0];
+      console.log(livre);
+      res.render("livres/oneLivre", {livre});
+    } catch (err) {
+      console.log(err).status(500).render("something wrong");
+    }
   },
 };
 

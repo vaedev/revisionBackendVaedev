@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/", mainController.getHome);
 router.get("/livres", mainController.getLivres);
-router.get("/livres/:nom", mainController.getOneLivre);
+router.get("/livres/:id", mainController.getOneLivre);
 
 
 module.exports = router;
